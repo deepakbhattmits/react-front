@@ -28,7 +28,7 @@
   "eslintConfig": {
     "extends": "react-app"
   },
-  "devDependencies": { 
+  "devDependencies": {
     "css-loader": "^2.1.0",
     "less": "^3.9.0",
     "less-loader": "^4.1.0",
