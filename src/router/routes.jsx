@@ -1,5 +1,5 @@
 import React from "react";
-import { Route } from "react-router-dom";
+import { HashRouter,Route,Routes } from "react-router-dom";
 import App from "../components/app";
 import Search from "../components/search";
 import Submit from "../components/submit";
@@ -7,21 +7,20 @@ import SearchRecord from "../components/searchRecord";
 import Header from "../header";
 import Footer from "../footer";
 
-class ReactRouter extends React.Component {
-  render() {
-    return (
-      <React.Fragment> 
+const ReactRouter =()=><> 
             <Header />
-            <div className="container-fluid">
-              <Route exact path="/" component={App} />
-              <Route  path="/Search" component={Search} />
-              <Route  path="/Submit" component={Submit} />
-              <Route  path="/searchRecord" component={SearchRecord} />
+        <div className="container-fluid">
+          <HashRouter>
+            <Routes>
+              <Route  path="/" element={App} />
+              <Route  path="/Search" element={Search} />
+              <Route  path="/Submit" element={Submit} />
+              <Route  path="/searchRecord" element={SearchRecord} />
+            </Routes>
+          </HashRouter>
+              
             </div>
             <Footer />
-      </React.Fragment>
-    );
-  }
-}
+      </>
 
 export default ReactRouter;
